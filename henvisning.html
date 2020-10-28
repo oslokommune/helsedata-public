@@ -1,0 +1,1058 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Henvisning</title>
+      <style type="text/css"><!--*/-->  
+
+
+body
+{
+	background-color: #ffffff;
+	color: #000000;
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700'); */
+
+@media screen {
+	
+	.Top {
+	width:95%;
+	margin: 1px;
+	/**border:1px solid gray;
+	background-color: #eeeeee;*/
+	padding:1em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	}
+
+	.No-line-top {
+	width:95%;
+	margin: 1px;
+	padding:1em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	}
+	
+	.Header {
+	width: 100%;
+	/*border:1px solid black;*/
+	overflow: visible;
+	padding: 1px;
+	}
+	
+	.No-line-header {
+	width: 100%;
+	overflow: visible;
+	padding: 1px;
+	}
+	
+	.HeaderContent {
+	width: 100%;
+	padding: 1px;
+	}
+	
+	.No-line-headerContent {
+	width: 100%;
+	padding: 1px;
+	line-height: 20px;
+	}
+	
+	.Caption {
+	width: 100px;
+	padding:1px;
+	margin-right: 2px;
+	float: left;
+	clear: both;
+	font-weight: bold;
+	}
+	.Document .Caption {
+		background-color: #CAE8EA;
+	}
+	
+	.No-line-caption {
+	width: 100px;
+	padding:1px;
+	margin-right: 2px;
+	float: left;
+	clear: both;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline-block;
+	width: 15%;
+	min-width: 100px;
+	}
+	.No-line-caption.servprov {
+		padding-top: 4px;
+	}
+	
+	.Content, .No-line-content {
+	padding:1px;
+	background-color:  white;
+	margin-right: 1px;
+	}
+	.No-line-content {
+	display: inline-block;
+    width: 65%;
+	}
+	.inline-content div {
+	display: inline;
+	}
+
+	.Content div, .No-line-content div {
+	display:inline;
+	}
+	
+	.NoScreen {
+	display: none;
+	}
+	
+	input:checked+table {
+	display: none;
+	}
+	.VisSkjul {
+	margin-left: 5px;
+	color: blue;
+	cursor: pointer;
+	}
+
+	.VisSkjul:after {
+	content:"\A";
+	white-space: pre;
+	}
+	.Document h1 {
+		color:white;
+		background-color:gray;
+	}
+	.Document h2 {
+		color:white;
+		background-color:gray;
+	}
+	.Document .summary h2 {
+		background-color: #fff;
+	}
+	.No-line-doc  .summary h2,
+	.One-line-doc  .summary h2 {
+		background-color:#e3e3e3;
+	}
+	.No-line-doc .summary table,
+	.One-line-doc .summary table {
+		background-color: #e3e3e3;
+	}
+	.Document .summary h2 {
+		background-color: #ecece7;
+	}
+	.Document .summary table{
+		background-color: #ecece7;
+	}
+	.Document .summary {
+		box-shadow: 1px 1px 8px 1px #6d6a60;
+	}
+}
+
+@media print {
+
+	.Top, .No-line-top {
+	margin: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	overflow: visible;
+	}
+
+	.HeaderContent, .No-line-headerContent {
+	width: 47.5%;
+	height: 82px;
+	min-height: 82px;
+	max-height: 82px;
+	border: solid black 1px;
+	padding: 0.5em;
+	float: left;
+	overflow: hidden;
+	}
+	
+	.Caption, .No-line-caption {
+	float: left;
+	display:inline;
+	font-weight: bold;
+	}
+	
+	.NoPrint {
+	display: none;
+	}
+	
+	input:checked+table {
+	display: block;
+	}
+
+	.VisSkjul {
+	display: none;
+	}
+	.Document h1 {
+		color: #000;
+		background-color: #fff;
+	}
+	.Document h2 {
+		color: #000;
+		background-color: #fff;
+	}
+	.Document .summary h2 {
+		background-color: #fff;
+	}
+	.Document .summary {
+		background-color: #ffffff;
+	}
+	.Document .summary,
+	.One-line-doc .summary,
+	.No-line-doc .summary {
+		border: 1px solid #6d6a60;
+	}
+
+}
+
+div {
+	min-height: 12px;
+}
+
+.Document {
+width:95%;
+clear:left;
+margin: 1px;
+border:1px solid gray;
+padding:1em;
+background-color: #eeeeee;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+}
+
+.No-line-doc, .One-line-doc {
+width:95%;
+clear:left;
+margin: 1px;
+padding:1em;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+}
+
+.Document h1 {
+padding:0.3em;
+border:1px solid gray;
+font-size: 1.8em;
+margin-bottom:0.3em;
+margin-top:0em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.No-line-doc h1, .One-line-doc h1 {
+padding:0.1em;
+font-size: 1.8em;
+line-height:0.7em;
+margin-bottom:0.3em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.Document h2 {
+padding:0.4em;
+border:1px solid gray;
+font-size: 1.4em;
+line-height:0.7em;
+margin-bottom:0.3em;
+margin-top:0.3em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.No-line-doc h2, .One-line-doc h2 {
+padding:0.1em;
+font-size: 1.4em;
+line-height:1em;
+margin-top:1em;
+margin-bottom:0em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.summary h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+	border: none;
+}
+.Document .summary {
+	margin: 10px;
+}
+.No-line-doc  .summary h2,
+.One-line-doc  .summary h2,
+.Document .summary h2	{
+	padding-top:1em; 
+	padding-left:1em; 
+	margin-left:0em;
+}
+.No-line-doc  .summary h2,
+.One-line-doc  .summary h2 {
+	margin-top:0em; 
+}
+.Document .summary h2 {
+	color: #000;
+}
+.Document .summary table{
+	border: none;
+}
+.No-line-doc  .summary td,
+.One-line-doc  .summary td,
+.Document   .summary td {
+	background-color: inherit; 
+}
+.Document h3 {
+padding:0.2em;
+color:black;
+font-size: 1.2em;
+line-height:0.1em;
+margin-bottom:0.3em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.No-line-doc h3, .One-line-doc h3 {
+padding:0.2em;
+font-size: 1.3em;
+line-height:1em;
+margin-bottom:0.3em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.Document table {
+border:1px solid black;
+width:100%;
+}
+
+.No-line-doc table, .One-line-doc table {
+width:100%;
+}
+
+.Document th {
+background-color: #CAE8EA;
+border-style:none;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+text-align: left;
+vertical-align: top;
+width: 100px;
+font-weight: normal;
+padding-right: 5px;
+}
+
+.One-line-doc th {
+border-top: 1px solid lightgrey; 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+text-align: left;
+vertical-align: top;
+width: 100px;
+padding: 4px 5px 4px 2px;
+font-weight: bold;
+/* color: #826b35; */
+}
+
+.No-line-doc th {
+border-style:none;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+text-align: left;
+vertical-align: top;
+width: 100px;
+font-weight: bold;
+padding-right: 5px;
+/* color: #826b35; */
+}
+
+.Document td {
+background-color: white;
+border-style: none;
+text-align: left;
+vertical-align: top;
+font-size: 13px;
+}
+
+.No-line-doc tr.striped {
+	background-color: #f3f3f3;
+}
+
+.One-line-doc td {
+border-top: 1px solid lightgrey;
+background-color: white;
+text-align: left;
+vertical-align: top;
+font-size: 13px;
+padding: 4px 2px 4px 2px;
+}
+
+.No-line-doc td {
+border-style: none;
+text-align: left;
+vertical-align: top;
+font-size: 13px;
+}
+
+.Document th.h2 {
+color:white;
+background-color: gray;
+border:1px solid gray;
+font-size: 1em;
+line-height:0.9em;
+width: 100px;
+}
+
+.One-line-doc th.h2 {
+border-top: 1px solid lightgrey;
+font-family: Arial, Helvetica, sans-serif;
+font-size:1.3em;
+text-align: left;
+vertical-align: top;
+width: 100px;
+padding: 4px 2px 4px 2px;
+}
+
+.No-line-doc th.h2 {
+border-style:none;
+font-family: Arial, Helvetica, sans-serif;
+font-size:1.3em;
+text-align: left;
+vertical-align: top;
+width: 100px;
+}
+
+.Document th.h3 {
+background-color: gray;
+color:white;
+}
+
+.One-line-doc th.h3 {
+border-top: 1px solid lightgrey;
+font-family: Arial, Helvetica, sans-serif;
+font-size:1.2em;
+text-align: left;
+vertical-align: top;
+width: 100px;
+padding: 4px 2px 4px 2px;
+}
+
+.No-line-doc th.h3 {
+border-style:none;
+font-family: Arial, Helvetica, sans-serif;
+font-size:1.2em;
+text-align: left;
+vertical-align: top;
+width: 100px;
+}
+
+td.Emphasized {
+background-color:#CAE8EA;
+width: 100px;
+}
+.strong {
+	font-weight: 600;
+}
+.viktig {
+color: red;
+}
+.horRuler hr {
+	border: 1px dotted #d6d6d6;
+}
+.Box {
+border:1px solid black;
+padding:1px;
+overflow: hidden;
+line-height: 24px;
+}
+.Document .Box {
+background-color: #fff;
+}
+	
+.MainCaption {
+padding:1px;
+margin: 1px;
+display: inline;
+font-weight: bold;
+font-size: 12px;
+}
+.Document .MainCaption {
+	background-color: #CAE8EA;
+	display: inline-block;
+	padding-left: 2px;
+	padding-right: 5px;
+	margin-right: 0;
+}
+.MainContent {
+padding:1px;
+padding-right:5px;
+background-color:  white;
+margin: 1px;
+display: inline;
+font-size: 12px;
+}
+.Document .MainContent {
+	margin-left: 0;
+}
+
+.Block {
+float: left;
+width: 32%;
+}
+.Document .Block {
+	border: 2px solid #eeeeee;
+}
+.Box .Block:last-child {
+	float: none;
+	overflow: hidden;
+	width: auto;
+}
+
+#FellesMeny ul { 
+margin: 0;
+padding: 0; 
+list-style-type: none; 
+list-style-image: none;
+font-size: 1.03em;
+}
+
+#FellesMeny li { 
+display:inline;
+}
+
+#FellesMeny a {
+text-decoration:none;
+color: blue;
+white-space:nowrap;
+padding-right:1em;
+width:15em;
+}
+
+#FellesMeny a:hover {
+color: purple;
+}
+
+@media print {
+	.Document th.h3 {
+		color: #000;
+		font-weight: 600;
+	}
+}
+
+p.TestMessageWarning {
+	background-color: #fff3cd;
+	color: #856404;
+	padding: 1rem;
+	font-size: x-large;
+	border: 3px solid #ffeeba;
+	border-radius: .5rem
+}
+
+<!--/*--></style>
+      <style type="text/css"><!--*/-->  
+
+
+.dummy { /* first css class is sometimes ignored, therefore need a dummy at first */
+}
+
+body.Document {
+	background-color: #fff;
+	border: none;
+}
+body.Document.Smooth {
+	border: none;
+	box-shadow: none;
+}
+.Smooth .No-line-header {
+	padding: 10px;
+	background-color: #fff;
+	width: initial;
+}
+.Document.Smooth {
+	border-color: #e8e8e8;
+	background-color: #fff;
+    box-shadow: 0px 0px 2px #6d6a60;
+}
+.Document.Smooth h1 {
+	color: #08111b;;
+	background-color: #ecece7;
+	border-color: #d8d8d8;
+}
+.Document.Smooth h2 {
+	color: #08111b;
+	background-color: #ecece7;
+	border-color: #d8d8d8;
+}
+.Document.Smooth h3 {
+	color: black;
+}
+.Document.Smooth table {
+	border-color: #d8d8d8;
+}
+.Document.Smooth th {
+	background-color: #efefef;
+}
+.Document.Smooth td {
+	background-color: white;
+}
+.Document.Smooth .summary td {
+	background-color: inherit;
+}
+.Document.Smooth th.h2 {
+	color: #08111b;;
+	background-color: #ececec;
+}
+.Document.Smooth th.h3 {
+	color: #08111b;;
+	background-color: #ececec;
+}
+.Document.Smooth .Caption {
+	background-color: #ececec;
+}
+.Document.Smooth .MainCaption {
+	background-color: #ececec;
+	font-weight: normal;
+	font-size: 13px;
+}
+.Document.Smooth .MainContent {
+	font-size: 14px;
+}
+.Document.Smooth [class^=eh-col-].eh-label, 
+.Document.Smooth [class^=eh-col-] .eh-label {
+	background-color: #f7f6ef;
+	color: #826b35;
+}
+.Document.Smooth .summary .eh-label {
+	background-color: inherit;
+}
+.Document.Smooth [class^=eh-col-].eh-label.h3 {
+	color: #08111b;
+	background-color: #ecece7;
+}
+.Document.Smooth [class^=eh-section] {
+	border-color: #d8d8d8;
+	background-color: #fff;
+}
+.Document.Smooth .summary [class^=eh-section]  {
+	background-color: #ecece7;
+}
+.Document.Smooth .VisSkjul {
+	color: blue;
+}
+@media screen and (max-width: 767px) {
+	.Document.Smooth [class$=eh-section] .eh-row-8 [class^=eh-col-] .eh-label.hd {
+		background-color: #efefef;
+	}
+}
+@media print {
+	body.Document.Smooth {
+		background-color: #fff;
+		border: none;
+	}
+	.Smooth .No-line-header {
+		padding: 1px;
+	}
+	.Document.Smooth h1 {
+		color: #000;
+		background-color: #fff;
+		border: none;
+		margin: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.Document.Smooth h2 {
+		color: #000;
+		background-color: #fff;
+		border: none;
+		margin: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.Document.Smooth h3 {
+		background-color: #fff;
+		border: none;
+		margin: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.Document.Smooth .summary {
+		border: 1px solid #6d6a60;
+		background-color: #ffffff;
+	}
+	.Document.Smooth .summary h2 {
+		background-color: #fff;
+	}
+	.Document.Smooth .summary [class^=eh-section],
+	.Document.Smooth .summary [class^=eh-section] [class^=eh-col-] {
+		background-color: #fff;
+		border: none;
+		margin: 0;
+	}
+	.Document.Smooth [class^=eh-col-].eh-label.h3 {
+		background-color: #fff;
+		border: none;
+		color: #000;
+	}
+	.Document.Smooth [class^=eh-section] {
+		font-size: 10px;
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+	.Document.Smooth [class^=eh-col-].eh-label, 
+	.Document.Smooth [class^=eh-col-] .eh-label {
+		background-color: #f7f6ef;
+		color: #826b35;
+		font-size: 10px;
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+	.Document.Smooth [class^=eh-col-].eh-field, 
+	.Document.Smooth [class^=eh-col-] .eh-field {
+		font-size: 10px;
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+	
+<!--/*--></style>
+   </head>
+   <body>
+      <div class="No-line-top">
+         <div class="No-line-header">
+            <div class="No-line-headerContent">
+               <div class="No-line-caption">Avsender&nbsp;</div>
+               <div class="No-line-content">
+                  <div>Rita Lin&nbsp;</div>
+                  <div>
+                     <div class="NoPrint"><span class="strong">Institusjon:&nbsp;</span></div>Kattskinnet legesenter</div>
+               </div>
+            </div>
+            <div class="No-line-headerContent">
+               <div class="No-line-caption">Pasient&nbsp;</div>
+               <div class="No-line-content">
+                  <div>Dottno, Finn&nbsp;
+                     			<span class="strong">FNR:&nbsp;</span>210164&nbsp;00952&nbsp;
+                     		</div>
+                  <div class="NoPrint">&nbsp;<b>Bostedsadresse&nbsp;</b></div>
+                  <div>Snurreveien 23</div>
+                  <div class="NoPrint">,</div>
+                  <div>1111&nbsp;Landgod</div>
+                  <div class="NoPrint">&nbsp;</div>
+                  <div><span class="strong">Telefon:</span>&nbsp;+4712345678&nbsp;</div>
+               </div>
+            </div>
+            <div class="No-line-headerContent">
+               <div class="No-line-caption">Mottaker&nbsp;</div>
+               <div class="No-line-content">
+                  <div>
+                     <div class="NoPrint"><span class="strong">Institusjon:&nbsp;</span></div>ST OLAVS HOSPITAL HF</div>
+                  <div>
+                     <div class="NoPrint">-&nbsp;</div>Ortopedisk kirurgi&nbsp;</div>
+               </div>
+            </div>
+            <div class="No-line-headerContent">
+               <div class="NoScreen">&nbsp;</div>
+            </div>
+         </div>
+      </div>
+      <div class="Document Smooth">
+         <div class="NoPrint">
+            <div id="FellesMeny" class="FellesMeny">
+               <ul>
+                  <li><a href="#Diagnosis1">Diagnoser</a></li>
+                  <li><a href="#CAVE1">CAVE</a></li>
+                  <li><a href="#PROB1">Problemstilling</a></li>
+                  <li><a href="#UTRED1">Forventet utredning/behandling</a></li>
+                  <li><a href="#OPPL1">Kliniske opplysninger</a></li>
+                  <li><a href="#ANAM1">Sykehistorie</a></li>
+                  <li><a href="#ResultItem1">Funn/undersøkelsesresultat</a></li>
+                  <li><a href="#HJ1">Funksjonsnivå/hjelpetiltak</a></li>
+                  <li><a href="#Medication1">Medisinering</a></li>
+                  <li><a href="#FA1">Familie/sosialt</a></li>
+                  <li><a href="#IP1">Informasjon til pasient/pårørende</a></li>
+                  <li><a href="#SYKM1">Sykemelding</a></li>
+                  <li><a href="#Patient1">Pasient</a></li>
+                  <li><a href="#PatRelHCP1">Helsetjenesteenheter</a></li>
+               </ul>
+            </div>
+         </div>
+         <h1>Henvisning&nbsp;-&nbsp;Utredning/behandling</h1>
+         <table>
+            <tbody>
+               <tr>
+                  <th>Utstedt</th>
+                  <td width="700px" colspan="7">21.01.17&nbsp;kl.01:11</td>
+               </tr>
+               <tr>
+                  <th>Hastegrad</th>
+                  <td width="700px" colspan="7">Øyeblikkelig hjelp&nbsp;
+                     							</td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="Diagnosis1">Diagnoser</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <th>A79&nbsp;
+                     				(ICPC)</th>
+                  <td width="700px" colspan="7">Ondartet svulst IKA</td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="CAVE1">CAVE</h2>
+         <table>
+            <tbody>
+               				
+               <tr>
+                  <td width="800px" colspan="8">
+                     <div>Morfinallergi</div>
+                  </td>
+               </tr>
+               				
+               			</tbody>
+         </table>
+         <h2 id="PROB1">Problemstilling</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <td colspan="7">
+                     <div>Trenger bedre smertelindring, samt en plan for fremtidig lindring, siden bruk av morfin
+                        er kontraindisert.</div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="UTRED1">Forventet utredning/behandling</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <td colspan="7">
+                     <div>Vurd av cytostatikatilbud, kfr. samtale med dr Dyregod i dag.</div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="OPPL1">Kliniske opplysninger</h2>
+         <table>
+            <tbody>
+               				
+               <tr>
+                  <td width="800px" colspan="8">
+                     <div> <br>Henvist fra overlege Olsen kir avd til OUS, hvor han var innlagt i sept 2015. Det
+                        viste seg å være umulig å fjerne tumor. <br>Samtale. Det ble funnet stor metastase (8 cm) i lever ved ktr St.Olavs i okt (dr Olsen),
+                        ble innl Kir 3 B OUS hvor det ble gjort laparatomi og konkl med inoperabilitet. Han
+                        har vært sykm, til 071215. Han har hatt store plager med muskelspenninger. <br>Innk epikrise, kontakter Olsen deretter pas. <br></div>
+                  </td>
+               </tr>
+               				
+               			</tbody>
+         </table>
+         <h2 id="ANAM1">Sykehistorie</h2>
+         <table>
+            <tbody>
+               				
+               <tr>
+                  <td width="800px" colspan="8">
+                     <div>Parox suprav takykardi _ AV knut reentry takykardi ev res AR <br>95 elektrokonv takykardi <br>95 ca coli sigm med res av solitær levermetastase <br>00 metastase hø leverlapp <br></div>
+                  </td>
+               </tr>
+               				
+               			</tbody>
+         </table>
+         <h2 id="ResultItem1">Funn/undersøkelsesresultat</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <th>Undersøkelse</th>
+                  <th colspan="1">Funn/resultat</th>
+                  <th colspan="6">Tidspunkt&nbsp;for&nbsp;undersøkelsen</th>
+               </tr>
+               <tr>
+                  <td>
+                     <div>P-CEA</div>
+                  </td>
+                  <td width="100px" colspan="1">48.1&nbsp;IE/L&nbsp;
+                     				<span class="strong">Større</span></td>
+                  <td width="600px" colspan="6">19.01.17</td>
+               </tr>
+               <tr>
+                  <td>
+                     <div>B-Hemoglobin</div>
+                  </td>
+                  <td width="100px" colspan="1">14.1&nbsp;g/dL&nbsp;
+                     				</td>
+                  <td width="600px" colspan="6">19.01.17</td>
+               </tr>
+               <tr>
+                  <td>
+                     <div>Us-ALAT</div>
+                  </td>
+                  <td width="100px" colspan="1">125&nbsp;IE/L&nbsp;
+                     				<span class="strong">Større</span></td>
+                  <td width="600px" colspan="6">19.01.17</td>
+               </tr>
+               <tr>
+                  <td>
+                     <div>Us-ALP</div>
+                  </td>
+                  <td width="100px" colspan="1">552&nbsp;IE/L&nbsp;
+                     				<span class="strong">Større</span></td>
+                  <td width="600px" colspan="6">19.01.17</td>
+               </tr>
+               <tr>
+                  <td>
+                     <div>Us-ASAT</div>
+                  </td>
+                  <td width="100px" colspan="1">96&nbsp;IE/L&nbsp;
+                     				<span class="strong">Større</span></td>
+                  <td width="600px" colspan="6">19.01.17</td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="HJ1">Funksjonsnivå/hjelpetiltak</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <td colspan="7">
+                     <div>Har klart seg alene inntil nå.</div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="Medication1">Medisinering</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <th>Legemiddel</th>
+                  <th colspan="1">Status</th>
+                  <th colspan="1">Mengde</th>
+                  <th colspan="5">Dosering</th>
+               </tr>
+               <tr>
+                  <td>Sotacor Tab</td>
+                  <td width="100px" colspan="1">Benyttes regelmessig&nbsp;
+                     			</td>
+                  <td width="100px" colspan="1">80&nbsp;mg&nbsp;
+                     			</td>
+                  <td width="500px" colspan="5">Mot hjerteuro 1/2 t morgen og kveld.&nbsp;
+                     				</td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="FA1">Familie/sosialt</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <td colspan="7">
+                     <div>Åpne forhold til fam, planl sydentur i vinter.</div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="IP1">Informasjon til pasient/pårørende</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <td colspan="7">
+                     <div>Er informert om tilstandens forventede dødelige utfall.</div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="SYKM1">Sykemelding</h2>
+         <table>
+            <tbody>
+               				
+               <tr>
+                  <td width="100px" colspan="1">
+                     <div>Nedsatt arbeidsevne fom. medio januar pga smerter</div>
+                  </td>
+                  <td colspan="7">
+                     <div>Start:&nbsp;
+                        							19.01.17</div>
+                     <div>Slutt:&nbsp;
+                        							19.03.17</div>
+                  </td>
+               </tr>
+               				
+               				
+               				
+               			</tbody>
+         </table>
+         <h2 id="Patient1">Pasient</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <th rowspan="2">Pasientinfo</th>
+                  <th colspan="1">Navn</th>
+                  <th colspan="1">Fødselsnummer&nbsp;
+                     						</th>
+                  <th colspan="1">Kjønn</th>
+                  <th colspan="4">Fødselsdag</th>
+               </tr>
+               <tr>
+                  <td width="100px" colspan="1">Dottno, Finn</td>
+                  <td width="100px" colspan="1">21016400952</td>
+                  <td width="100px" colspan="1">Mann&nbsp;
+                     						</td>
+                  <td width="400px" colspan="4">21.01.64</td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="PatRelHCP1">Helsetjenesteenheter</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <th colspan="1">Pasientrelasjon</th>
+                  <th colspan="1">Person</th>
+                  <th colspan="1">Id</th>
+                  <th colspan="5">Kontaktinformasjon</th>
+               </tr>
+               <tr>
+                  <th colspan="1" rowspan="1">Henvisende helsepersonell&nbsp;
+                     					</th>
+                  <td width="100px" colspan="1"><span class="strong">Lege</span>&nbsp;
+                     			Rita Lin&nbsp;
+                     		</td>
+                  <td colspan="1"><span class="strong">HPR:</span>&nbsp;
+                     			9144900&nbsp;
+                     		</td>
+                  <td rowspan="1" colspan="5"><span class="strong">Arbeidsadresse:&nbsp;
+                        				</span><div><span class="strong">Telefon:</span>&nbsp;+4722345678&nbsp;</div>
+                  </td>
+               </tr>
+               <tr>
+                  <th colspan="1" rowspan="1">Fastlege&nbsp;
+                     					</th>
+                  <td width="100px" colspan="1">Magnar Koman&nbsp;
+                     		</td>
+                  <td colspan="1"><span class="strong">HPR:</span>&nbsp;
+                     			9144889&nbsp;
+                     		</td>
+                  <td rowspan="1" colspan="5"><span class="strong">Arbeidsadresse:&nbsp;
+                        				</span><div><span class="strong">Telefon:</span>&nbsp;+4722345678&nbsp;</div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="Document Smooth">
+         <h2>Dokumentinformasjon</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <th>Melding&nbsp;opprettet</th>
+                  <td width="100">21.01.17&nbsp;kl.11:11</td>
+                  <th>Meldingsid</th>
+                  <td>069ea730-4451-11e7-9598-0800200c9a66</td>
+               </tr>
+               <tr>
+                  <th>Visningsversjon</th>
+                  <td colspan="3">henvisning1.0 - v3.1.2 </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </body>
+</html>
