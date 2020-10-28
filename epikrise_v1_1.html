@@ -1,0 +1,1411 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Epikrise</title>
+      <style type="text/css"><!--*/-->  
+
+
+body
+{
+	background-color: #ffffff;
+	color: #000000;
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700'); */
+
+@media screen {
+	
+	.Top {
+	width:95%;
+	margin: 1px;
+	/**border:1px solid gray;
+	background-color: #eeeeee;*/
+	padding:1em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	}
+
+	.No-line-top {
+	width:95%;
+	margin: 1px;
+	padding:1em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	}
+	
+	.Header {
+	width: 100%;
+	/*border:1px solid black;*/
+	overflow: visible;
+	padding: 1px;
+	}
+	
+	.No-line-header {
+	width: 100%;
+	overflow: visible;
+	padding: 1px;
+	}
+	
+	.HeaderContent {
+	width: 100%;
+	padding: 1px;
+	}
+	
+	.No-line-headerContent {
+	width: 100%;
+	padding: 1px;
+	line-height: 20px;
+	}
+	
+	.Caption {
+	width: 100px;
+	padding:1px;
+	margin-right: 2px;
+	float: left;
+	clear: both;
+	font-weight: bold;
+	}
+	.Document .Caption {
+		background-color: #CAE8EA;
+	}
+	
+	.No-line-caption {
+	width: 100px;
+	padding:1px;
+	margin-right: 2px;
+	float: left;
+	clear: both;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline-block;
+	width: 15%;
+	min-width: 100px;
+	}
+	.No-line-caption.servprov {
+		padding-top: 4px;
+	}
+	
+	.Content, .No-line-content {
+	padding:1px;
+	background-color:  white;
+	margin-right: 1px;
+	}
+	.No-line-content {
+	display: inline-block;
+    width: 65%;
+	}
+	.inline-content div {
+	display: inline;
+	}
+
+	.Content div, .No-line-content div {
+	display:inline;
+	}
+	
+	.NoScreen {
+	display: none;
+	}
+	
+	input:checked+table {
+	display: none;
+	}
+	.VisSkjul {
+	margin-left: 5px;
+	color: blue;
+	cursor: pointer;
+	}
+
+	.VisSkjul:after {
+	content:"\A";
+	white-space: pre;
+	}
+	.Document h1 {
+		color:white;
+		background-color:gray;
+	}
+	.Document h2 {
+		color:white;
+		background-color:gray;
+	}
+	.Document .summary h2 {
+		background-color: #fff;
+	}
+	.No-line-doc  .summary h2,
+	.One-line-doc  .summary h2 {
+		background-color:#e3e3e3;
+	}
+	.No-line-doc .summary table,
+	.One-line-doc .summary table {
+		background-color: #e3e3e3;
+	}
+	.Document .summary h2 {
+		background-color: #ecece7;
+	}
+	.Document .summary table{
+		background-color: #ecece7;
+	}
+	.Document .summary {
+		box-shadow: 1px 1px 8px 1px #6d6a60;
+	}
+}
+
+@media print {
+
+	.Top, .No-line-top {
+	margin: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	overflow: visible;
+	}
+
+	.HeaderContent, .No-line-headerContent {
+	width: 47.5%;
+	height: 82px;
+	min-height: 82px;
+	max-height: 82px;
+	border: solid black 1px;
+	padding: 0.5em;
+	float: left;
+	overflow: hidden;
+	}
+	
+	.Caption, .No-line-caption {
+	float: left;
+	display:inline;
+	font-weight: bold;
+	}
+	
+	.NoPrint {
+	display: none;
+	}
+	
+	input:checked+table {
+	display: block;
+	}
+
+	.VisSkjul {
+	display: none;
+	}
+	.Document h1 {
+		color: #000;
+		background-color: #fff;
+	}
+	.Document h2 {
+		color: #000;
+		background-color: #fff;
+	}
+	.Document .summary h2 {
+		background-color: #fff;
+	}
+	.Document .summary {
+		background-color: #ffffff;
+	}
+	.Document .summary,
+	.One-line-doc .summary,
+	.No-line-doc .summary {
+		border: 1px solid #6d6a60;
+	}
+
+}
+
+div {
+	min-height: 12px;
+}
+
+.Document {
+width:95%;
+clear:left;
+margin: 1px;
+border:1px solid gray;
+padding:1em;
+background-color: #eeeeee;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+}
+
+.No-line-doc, .One-line-doc {
+width:95%;
+clear:left;
+margin: 1px;
+padding:1em;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+}
+
+.Document h1 {
+padding:0.3em;
+border:1px solid gray;
+font-size: 1.8em;
+margin-bottom:0.3em;
+margin-top:0em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.No-line-doc h1, .One-line-doc h1 {
+padding:0.1em;
+font-size: 1.8em;
+line-height:0.7em;
+margin-bottom:0.3em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.Document h2 {
+padding:0.4em;
+border:1px solid gray;
+font-size: 1.4em;
+line-height:0.7em;
+margin-bottom:0.3em;
+margin-top:0.3em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.No-line-doc h2, .One-line-doc h2 {
+padding:0.1em;
+font-size: 1.4em;
+line-height:1em;
+margin-top:1em;
+margin-bottom:0em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.summary h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+	border: none;
+}
+.Document .summary {
+	margin: 10px;
+}
+.No-line-doc  .summary h2,
+.One-line-doc  .summary h2,
+.Document .summary h2	{
+	padding-top:1em; 
+	padding-left:1em; 
+	margin-left:0em;
+}
+.No-line-doc  .summary h2,
+.One-line-doc  .summary h2 {
+	margin-top:0em; 
+}
+.Document .summary h2 {
+	color: #000;
+}
+.Document .summary table{
+	border: none;
+}
+.No-line-doc  .summary td,
+.One-line-doc  .summary td,
+.Document   .summary td {
+	background-color: inherit; 
+}
+.Document h3 {
+padding:0.2em;
+color:black;
+font-size: 1.2em;
+line-height:0.1em;
+margin-bottom:0.3em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.No-line-doc h3, .One-line-doc h3 {
+padding:0.2em;
+font-size: 1.3em;
+line-height:1em;
+margin-bottom:0.3em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.Document table {
+border:1px solid black;
+width:100%;
+}
+
+.No-line-doc table, .One-line-doc table {
+width:100%;
+}
+
+.Document th {
+background-color: #CAE8EA;
+border-style:none;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+text-align: left;
+vertical-align: top;
+width: 100px;
+font-weight: normal;
+padding-right: 5px;
+}
+
+.One-line-doc th {
+border-top: 1px solid lightgrey; 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+text-align: left;
+vertical-align: top;
+width: 100px;
+padding: 4px 5px 4px 2px;
+font-weight: bold;
+/* color: #826b35; */
+}
+
+.No-line-doc th {
+border-style:none;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+text-align: left;
+vertical-align: top;
+width: 100px;
+font-weight: bold;
+padding-right: 5px;
+/* color: #826b35; */
+}
+
+.Document td {
+background-color: white;
+border-style: none;
+text-align: left;
+vertical-align: top;
+font-size: 13px;
+}
+
+.No-line-doc tr.striped {
+	background-color: #f3f3f3;
+}
+
+.One-line-doc td {
+border-top: 1px solid lightgrey;
+background-color: white;
+text-align: left;
+vertical-align: top;
+font-size: 13px;
+padding: 4px 2px 4px 2px;
+}
+
+.No-line-doc td {
+border-style: none;
+text-align: left;
+vertical-align: top;
+font-size: 13px;
+}
+
+.Document th.h2 {
+color:white;
+background-color: gray;
+border:1px solid gray;
+font-size: 1em;
+line-height:0.9em;
+width: 100px;
+}
+
+.One-line-doc th.h2 {
+border-top: 1px solid lightgrey;
+font-family: Arial, Helvetica, sans-serif;
+font-size:1.3em;
+text-align: left;
+vertical-align: top;
+width: 100px;
+padding: 4px 2px 4px 2px;
+}
+
+.No-line-doc th.h2 {
+border-style:none;
+font-family: Arial, Helvetica, sans-serif;
+font-size:1.3em;
+text-align: left;
+vertical-align: top;
+width: 100px;
+}
+
+.Document th.h3 {
+background-color: gray;
+color:white;
+}
+
+.One-line-doc th.h3 {
+border-top: 1px solid lightgrey;
+font-family: Arial, Helvetica, sans-serif;
+font-size:1.2em;
+text-align: left;
+vertical-align: top;
+width: 100px;
+padding: 4px 2px 4px 2px;
+}
+
+.No-line-doc th.h3 {
+border-style:none;
+font-family: Arial, Helvetica, sans-serif;
+font-size:1.2em;
+text-align: left;
+vertical-align: top;
+width: 100px;
+}
+
+td.Emphasized {
+background-color:#CAE8EA;
+width: 100px;
+}
+.strong {
+	font-weight: 600;
+}
+.viktig {
+color: red;
+}
+.horRuler hr {
+	border: 1px dotted #d6d6d6;
+}
+.Box {
+border:1px solid black;
+padding:1px;
+overflow: hidden;
+line-height: 24px;
+}
+.Document .Box {
+background-color: #fff;
+}
+	
+.MainCaption {
+padding:1px;
+margin: 1px;
+display: inline;
+font-weight: bold;
+font-size: 12px;
+}
+.Document .MainCaption {
+	background-color: #CAE8EA;
+	display: inline-block;
+	padding-left: 2px;
+	padding-right: 5px;
+	margin-right: 0;
+}
+.MainContent {
+padding:1px;
+padding-right:5px;
+background-color:  white;
+margin: 1px;
+display: inline;
+font-size: 12px;
+}
+.Document .MainContent {
+	margin-left: 0;
+}
+
+.Block {
+float: left;
+width: 32%;
+}
+.Document .Block {
+	border: 2px solid #eeeeee;
+}
+.Box .Block:last-child {
+	float: none;
+	overflow: hidden;
+	width: auto;
+}
+
+#FellesMeny ul { 
+margin: 0;
+padding: 0; 
+list-style-type: none; 
+list-style-image: none;
+font-size: 1.03em;
+}
+
+#FellesMeny li { 
+display:inline;
+}
+
+#FellesMeny a {
+text-decoration:none;
+color: blue;
+white-space:nowrap;
+padding-right:1em;
+width:15em;
+}
+
+#FellesMeny a:hover {
+color: purple;
+}
+
+@media print {
+	.Document th.h3 {
+		color: #000;
+		font-weight: 600;
+	}
+}
+
+p.TestMessageWarning {
+	background-color: #fff3cd;
+	color: #856404;
+	padding: 1rem;
+	font-size: x-large;
+	border: 3px solid #ffeeba;
+	border-radius: .5rem
+}
+
+<!--/*--></style>
+      <style type="text/css"><!--*/-->  
+
+
+.dummy { /* first css class is sometimes ignored, therefore need a dummy at first */
+}
+
+body.Document {
+	background-color: #fff;
+	border: none;
+}
+body.Document.Smooth {
+	border: none;
+	box-shadow: none;
+}
+.Smooth .No-line-header {
+	padding: 10px;
+	background-color: #fff;
+	width: initial;
+}
+.Document.Smooth {
+	border-color: #e8e8e8;
+	background-color: #fff;
+    box-shadow: 0px 0px 2px #6d6a60;
+}
+.Document.Smooth h1 {
+	color: #08111b;;
+	background-color: #ecece7;
+	border-color: #d8d8d8;
+}
+.Document.Smooth h2 {
+	color: #08111b;
+	background-color: #ecece7;
+	border-color: #d8d8d8;
+}
+.Document.Smooth h3 {
+	color: black;
+}
+.Document.Smooth table {
+	border-color: #d8d8d8;
+}
+.Document.Smooth th {
+	background-color: #efefef;
+}
+.Document.Smooth td {
+	background-color: white;
+}
+.Document.Smooth .summary td {
+	background-color: inherit;
+}
+.Document.Smooth th.h2 {
+	color: #08111b;;
+	background-color: #ececec;
+}
+.Document.Smooth th.h3 {
+	color: #08111b;;
+	background-color: #ececec;
+}
+.Document.Smooth .Caption {
+	background-color: #ececec;
+}
+.Document.Smooth .MainCaption {
+	background-color: #ececec;
+	font-weight: normal;
+	font-size: 13px;
+}
+.Document.Smooth .MainContent {
+	font-size: 14px;
+}
+.Document.Smooth [class^=eh-col-].eh-label, 
+.Document.Smooth [class^=eh-col-] .eh-label {
+	background-color: #f7f6ef;
+	color: #826b35;
+}
+.Document.Smooth .summary .eh-label {
+	background-color: inherit;
+}
+.Document.Smooth [class^=eh-col-].eh-label.h3 {
+	color: #08111b;
+	background-color: #ecece7;
+}
+.Document.Smooth [class^=eh-section] {
+	border-color: #d8d8d8;
+	background-color: #fff;
+}
+.Document.Smooth .summary [class^=eh-section]  {
+	background-color: #ecece7;
+}
+.Document.Smooth .VisSkjul {
+	color: blue;
+}
+@media screen and (max-width: 767px) {
+	.Document.Smooth [class$=eh-section] .eh-row-8 [class^=eh-col-] .eh-label.hd {
+		background-color: #efefef;
+	}
+}
+@media print {
+	body.Document.Smooth {
+		background-color: #fff;
+		border: none;
+	}
+	.Smooth .No-line-header {
+		padding: 1px;
+	}
+	.Document.Smooth h1 {
+		color: #000;
+		background-color: #fff;
+		border: none;
+		margin: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.Document.Smooth h2 {
+		color: #000;
+		background-color: #fff;
+		border: none;
+		margin: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.Document.Smooth h3 {
+		background-color: #fff;
+		border: none;
+		margin: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.Document.Smooth .summary {
+		border: 1px solid #6d6a60;
+		background-color: #ffffff;
+	}
+	.Document.Smooth .summary h2 {
+		background-color: #fff;
+	}
+	.Document.Smooth .summary [class^=eh-section],
+	.Document.Smooth .summary [class^=eh-section] [class^=eh-col-] {
+		background-color: #fff;
+		border: none;
+		margin: 0;
+	}
+	.Document.Smooth [class^=eh-col-].eh-label.h3 {
+		background-color: #fff;
+		border: none;
+		color: #000;
+	}
+	.Document.Smooth [class^=eh-section] {
+		font-size: 10px;
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+	.Document.Smooth [class^=eh-col-].eh-label, 
+	.Document.Smooth [class^=eh-col-] .eh-label {
+		background-color: #f7f6ef;
+		color: #826b35;
+		font-size: 10px;
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+	.Document.Smooth [class^=eh-col-].eh-field, 
+	.Document.Smooth [class^=eh-col-] .eh-field {
+		font-size: 10px;
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+	
+<!--/*--></style>
+   </head>
+   <body>
+      <div class="No-line-top">
+         <div class="No-line-header">
+            <div class="No-line-headerContent">
+               <div class="No-line-caption">Avsender&nbsp;</div>
+               <div class="No-line-content">
+                  <div>NORSK HELSENETT SF HOVEDKONTOR</div>
+                  <div>
+                     <div class="NoPrint">-&nbsp;</div>Meldingsvalidering&nbsp;</div>
+               </div>
+            </div>
+            <div class="No-line-headerContent">
+               <div class="No-line-caption">Pasient&nbsp;</div>
+               <div class="No-line-content">
+                  <div>Danser, Line&nbsp;
+                     			<span class="strong">Fødselsnummer:&nbsp;</span>13116900216&nbsp;
+                     		</div>
+               </div>
+            </div>
+            <div class="No-line-headerContent">
+               <div class="No-line-caption">Mottaker&nbsp;</div>
+               <div class="No-line-content">
+                  <div>Tulle Tre
+                     <div class="NoPrint">,</div>&nbsp;</div>
+                  <div>NORSK HELSENETT SF HOVEDKONTOR</div>
+               </div>
+            </div>
+            <div class="No-line-headerContent">
+               <div class="No-line-caption">Kopimottaker&nbsp;</div>
+               <div class="No-line-content">
+                  <div>NORSK HELSENETT SF HOVEDKONTOR</div>
+                  <div>
+                     <div class="NoPrint">-&nbsp;</div>***Testtjeneste***&nbsp;</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="Document Smooth">
+         <div class="NoPrint">
+            <div id="FellesMeny" class="FellesMeny">
+               <ul>
+                  <li><a href="#Diagnosis1">Diagnoser</a></li>
+                  <li><a href="#CAVE1">CAVE</a></li>
+                  <li><a href="#AI1">Årsak&nbsp;til&nbsp;innleggelse</a></li>
+                  <li><a href="#TS1">Sykehistorie</a></li>
+                  <li><a href="#VU1">Vurdering</a></li>
+                  <li><a href="#FU1">Funn&nbsp;og&nbsp;undersøkelsesresultater</a></li>
+                  <li><a href="#FO1">Forløp&nbsp;og&nbsp;behandling</a></li>
+                  <li><a href="#ME1">Medisinering</a></li>
+                  <li><a href="#HJ1">Funksjonsnivå/hjelpetiltak</a></li>
+                  <li><a href="#OP1">Videre&nbsp;oppfølging</a></li>
+                  <li><a href="#SY1">Sykmelding</a></li>
+                  <li><a href="#IP1">Informasjon&nbsp;til&nbsp;pasient/pårørende</a></li>
+                  <li><a href="#Patient1">Pasient</a></li>
+                  <li><a href="#HCP1">Helsetjenesteenheter</a></li>
+                  <li><a href="#Event1">Hendelser</a></li>
+                  <li><a href="#ServReq1">Opprinnelig&nbsp;henvisning</a></li>
+               </ul>
+            </div>
+         </div>
+         <h1>Sykehusepikrise&nbsp;-&nbsp;Endelig rapport</h1>
+         <table>
+            <tbody>
+               <tr>
+                  <th>Innlagt</th>
+                  <td width="200px" colspan="1">27.04.17&nbsp;kl.09:00</td>
+                  <th>Utskrevet</th>
+                  <td colspan="5">04.05.17&nbsp;kl.09:20</td>
+               </tr>
+               <tr>
+                  <th>Ansvarlig</th>
+                  <td colspan="7">Overlege Rita Lin</td>
+               </tr>
+               <tr>
+                  <th>Utstedt</th>
+                  <td width="200px" colspan="1">05.05.17&nbsp;kl.00:33</td>
+                  <th>Godkjent</th>
+                  <td width="1000px" colspan="5">05.05.17&nbsp;kl.03:15</td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="Diagnosis1">Diagnoser</h2>
+         <table>
+            <tbody>
+               				
+               <tr>
+                  <th style="font-weight:bold">I330&nbsp;
+                     				(ICD-10)</th>
+                  <td style="font-weight:bold" width="200px" colspan="1">Endokarditt, 
+                     					        Streptokokker gr. B</td>
+               </tr>
+               				
+               				
+               			
+               				
+               <tr>
+                  <th style="font-weight:normal">E119&nbsp;
+                     				(ICD-10)</th>
+                  <td style="font-weight:normal" width="1400px" colspan="7">Diabetes mellitus</td>
+               </tr>
+               				
+               				
+               			
+               				
+               <tr>
+                  <th style="font-weight:normal">I252&nbsp;
+                     				(ICD-10)</th>
+                  <td style="font-weight:normal" width="1400px" colspan="7">Gammelt hjerteinfarkt</td>
+               </tr>
+               				
+               				
+               			</tbody>
+         </table>
+         <h2 id="CAVE1">CAVE</h2>
+         <table>
+            <tbody>
+               				
+               <tr>
+                  <td width="1600px" colspan="8">
+                     						
+                     <div xmlns="http://www.w3.org/1999/xhtml" xmlns:kith="http://www.kith.no/xmlstds" xmlns:xsd="http://www.w3.org/2001/XMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        							
+                        <p>Sulfa (exanthem 1999)</p>
+                        						</div>
+                     					</td>
+               </tr>
+               				
+               				
+               			</tbody>
+         </table>
+         <h2 id="AI1">Årsak&nbsp;til&nbsp;innleggelse</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <td colspan="7">
+                     <div>
+                        					
+                        <div xmlns="http://www.w3.org/1999/xhtml" xmlns:kith="http://www.kith.no/xmlstds" xmlns:xsd="http://www.w3.org/2001/XMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                           						
+                           <p>Slapp, subfebril siden juli, redusert matlyst, forhøyet CRP hos egen lege. Innlegges
+                              til utredning.</p>
+                           					</div>
+                        				</div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="TS1">Sykehistorie</h2>
+         <table>
+            <tbody>
+               				
+               <tr>
+                  <td width="1600px" colspan="8">
+                     						
+                     <div xmlns="http://www.w3.org/1999/xhtml" xmlns:kith="http://www.kith.no/xmlstds" xmlns:xsd="http://www.w3.org/2001/XMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        							
+                        <p>Kjent diabetes mellitus, påvist 1993. Behandlet i Spania for hjerteinfarkt sommeren
+                           1999. Kjent urinsyregikt.</p>
+                        						</div>
+                     					</td>
+               </tr>
+               				
+               				
+               			</tbody>
+         </table>
+         <h2 id="VU1">Vurdering</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <td colspan="7">
+                     <div>
+                        					
+                        <div xmlns="http://www.w3.org/1999/xhtml" xmlns:kith="http://www.kith.no/xmlstds" xmlns:xsd="http://www.w3.org/2001/XMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                           						
+                           <p>Man anser pas. som ferdigbehandlet etter nærmere 6 uker med i.v. penicillin, har lav
+                              CRP, afebril utskrivelsesdagen, befinner seg i god allmenntilstand uten tegn til hjertesvikt.
+                              Pas. skal fortsette med antibiotisk behandling pr. os i 4 uker etter utskrivelse.
+                              Pas. trenger fra nå av endokardittprofylakse ved tannbehandling, kir. inngrep og instrumentering
+                              via øvre lufteveier, munnhule, urinveier og endetarmen.</p>
+                           					</div>
+                        				</div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="FU1">Funn/undersøkelsesresultat</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <td width="1600px" colspan="8">
+                     						
+                     <div xmlns="http://www.w3.org/1999/xhtml" xmlns:kith="http://www.kith.no/xmlstds" xmlns:xsd="http://www.w3.org/2001/XMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        							
+                        <p>EKG: Sinusrytme, 64 pr. min, ve. grenblokk.</p>
+                        							
+                        <p>Rtg. thorax: Fibrose apicalt bilat., basalt ve. side. Klare lunger.</p>
+                        							
+                        <p>CT abdomen: Normal lever og milt. Nyrecyster. Ureteres av normal vidde. Ingen tegn
+                           til stase.</p>
+                        							
+                        <p>Urin bakt: Blandingskultur, sannsynlig forurensning.</p>
+                        							
+                        <p>Blodkultur: Streptococcus mutans, følsom for blant annet penicillin G. Ekko cor initialt
+                           normalt, etter hvert påvist vegetasjon på fremre mitralsegl, senere normalisert.</p>
+                        							
+                        <p>
+                           								<b>Blodprøver under oppholdet:</b>
+                           							</p>
+                        							
+                        <table>
+                           								
+                           <tbody>
+                              									
+                              <tr>
+                                 										
+                                 <td>Blodprøver/dato</td>
+                                 										
+                                 <td>27.04</td>
+                                 										
+                                 <td>28.04</td>
+                                 										
+                                 <td>29.04</td>
+                                 										
+                                 <td>30.04</td>
+                                 										
+                                 <td>01.05</td>
+                                 										
+                                 <td>02.05</td>
+                                 										
+                                 <td>03.05</td>
+                                 										
+                                 <td>04.05</td>
+                                 									</tr>
+                              									
+                              <tr>
+                                 										
+                                 <td>glukose kl 0800</td>
+                                 										
+                                 <td>7.4</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td>7.9</td>
+                                 										
+                                 <td>7.7</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td>7.6</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td></td>
+                                 									</tr>
+                              									
+                              <tr>
+                                 										
+                                 <td>leukocytter</td>
+                                 										
+                                 <td>8.2</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td>6.1</td>
+                                 										
+                                 <td>6.9</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td>8.4</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td></td>
+                                 									</tr>
+                              									
+                              <tr>
+                                 										
+                                 <td>hgb</td>
+                                 										
+                                 <td>13.8</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td>13.8</td>
+                                 										
+                                 <td>14.2</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td>3.9</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td></td>
+                                 									</tr>
+                              									
+                              <tr>
+                                 										
+                                 <td>SR</td>
+                                 										
+                                 <td>49</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td>61</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td>19</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td></td>
+                                 									</tr>
+                              									
+                              <tr>
+                                 										
+                                 <td>kreatin</td>
+                                 										
+                                 <td>85</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td>79</td>
+                                 										
+                                 <td>76</td>
+                                 										
+                                 <td>77</td>
+                                 										
+                                 <td>77</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td></td>
+                                 									</tr>
+                              									
+                              <tr>
+                                 										
+                                 <td>urinsyre</td>
+                                 										
+                                 <td>468</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td>304</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td>340</td>
+                                 										
+                                 <td></td>
+                                 										
+                                 <td></td>
+                                 									</tr>
+                              									
+                              <tr>
+                                 										
+                                 <td>CRP</td>
+                                 										
+                                 <td>79</td>
+                                 										
+                                 <td>52</td>
+                                 										
+                                 <td>39</td>
+                                 										
+                                 <td>30</td>
+                                 										
+                                 <td>20</td>
+                                 										
+                                 <td>4</td>
+                                 										
+                                 <td>4</td>
+                                 										
+                                 <td>6</td>
+                                 									</tr>
+                              								</tbody>
+                           							</table>
+                        						</div>
+                     					</td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="FO1">Forløp&nbsp;og&nbsp;behandling</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <td colspan="7">
+                     <div>
+                        					
+                        <div xmlns="http://www.w3.org/1999/xhtml" xmlns:kith="http://www.kith.no/xmlstds" xmlns:xsd="http://www.w3.org/2001/XMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                           						
+                           <p>
+                              Pga. mistenkt infeksjon ble det startet med penicillin, Nebcina og Flagyl i.v. før
+                              man kjente infeksjonfokus. Oppvekst av streptokokkus mutans i blodkultur, får deretter
+                              behandling som ved endokarditt, Penicillin 5 mill. x 4. Først senere i forløpet oppstår
+                              vegetasjoner på klaffene. Vegetasjonene følges med ekko cor. Ved de tre siste kontrollene
+                              ikke sett vegetasjoner. Man søker etter inngangsport for mikroben, hans hofteprotese
+                              er klinisk og rtg.ologisk upåfallende, henvises derfor til tannlegetilsyn. Påvist
+                              abscess i tann, som ble ekstrahert.<br></br>
+                              						</p>
+                           						
+                           <p>Pas. befinner seg i god allmenntilstand nå, føler seg i fin form, viser ingen tegn
+                              til svikt. BT har vært lett forhøyet. Systolisk trykk har variert fra 140 til 197,
+                              diastolisk trykk fra 75 til 101. Under innleggelse hatt lett forhøyet blodsukkerverdier,
+                              har fra tidligere diagnose diabetes mellitus, på ny fått generelle kostholdsråd.</p>
+                           					</div>
+                        				</div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="ME1">Medisinering</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <th>Legemiddel</th>
+                  <th colspan="1">Status</th>
+                  <th colspan="1">Mengde</th>
+                  <th colspan="5">Dosering</th>
+               </tr>
+               <tr>
+                  <td>Furix</td>
+                  <td width="200px" colspan="1">Benyttes regelmessig&nbsp;
+                     			</td>
+                  <td width="200px" colspan="1">20&nbsp;mg&nbsp;
+                     			</td>
+                  <td width="1000px" colspan="5">1 tabl. om morgenen&nbsp;
+                     				</td>
+               </tr>
+               <tr>
+                  <td>Selo-Zok</td>
+                  <td width="200px" colspan="1">Benyttes regelmessig&nbsp;
+                     			</td>
+                  <td width="200px" colspan="1">50&nbsp;mg&nbsp;
+                     			</td>
+                  <td width="1000px" colspan="5">1 tabl. om morgenen&nbsp;
+                     				</td>
+               </tr>
+               <tr>
+                  <td>Zyloric</td>
+                  <td width="200px" colspan="1">Benyttes regelmessig&nbsp;
+                     			</td>
+                  <td width="200px" colspan="1">100&nbsp;mg&nbsp;
+                     			</td>
+                  <td width="1000px" colspan="5">1 tabl. om morgenen&nbsp;
+                     				</td>
+               </tr>
+               <tr>
+                  <td>Apocillin</td>
+                  <td width="200px" colspan="1">Benyttes regelmessig&nbsp;
+                     			</td>
+                  <td width="200px" colspan="1">1&nbsp;g&nbsp;
+                     			</td>
+                  <td width="1000px" colspan="5">1 tabl. x2 i 4 uker etter utskrivelse&nbsp;
+                     				</td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="HJ1">Funksjonsnivå/hjelpetiltak</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <td colspan="7">
+                     <div>
+                        					
+                        <div xmlns="http://www.w3.org/1999/xhtml" xmlns:kith="http://www.kith.no/xmlstds" xmlns:xsd="http://www.w3.org/2001/XMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                           						
+                           <p>Går bra med stokk, litt svimmel.</p>
+                           					</div>
+                        				</div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="OP1">Videre&nbsp;oppfølging</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <td colspan="7">
+                     <div>
+                        					
+                        <div xmlns="http://www.w3.org/1999/xhtml" xmlns:kith="http://www.kith.no/xmlstds" xmlns:xsd="http://www.w3.org/2001/XMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                           						
+                           <p>Det avtales ingen videre kontroller her. Pas. skal til egen lege om 4 uker etter avsluttet
+                              behandling med antibiotika for kontroll av BT, CRP samt urin.</p>
+                           					</div>
+                        				</div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="SY1">Sykmelding</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <td colspan="7">
+                     <div>
+                        					
+                        <div xmlns="http://www.w3.org/1999/xhtml" xmlns:kith="http://www.kith.no/xmlstds" xmlns:xsd="http://www.w3.org/2001/XMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                           						
+                           <p>Sykmeldt ut uken etter utskrivelsen.</p>
+                           					</div>
+                        				</div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="IP1">Informasjon&nbsp;til&nbsp;pasient/pårørende</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <td colspan="7">
+                     <div>
+                        					
+                        <div xmlns="http://www.w3.org/1999/xhtml" xmlns:kith="http://www.kith.no/xmlstds" xmlns:xsd="http://www.w3.org/2001/XMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                           						
+                           <p>Pas. informert om behov for endokardittprofylakse. Pas. får nøye instrukser om å ta
+                              kontakt med lege før dersom behov pga. sykdomsfølelse, feber, tungpustenhet eller
+                              andre plager.</p>
+                           					</div>
+                        				</div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="Patient1">Pasient</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <th rowspan="2">Pasientinfo</th>
+                  <th colspan="1">Navn</th>
+                  <th colspan="1">Fødselsnummer&nbsp;
+                     						</th>
+                  <th colspan="1">Kjønn</th>
+                  <th colspan="4">Fødselsdag</th>
+               </tr>
+               <tr>
+                  <td width="200px" colspan="1">Danser, Line</td>
+                  <td width="200px" colspan="1">13116900216</td>
+                  <td width="200px" colspan="1">Kvinne&nbsp;
+                     						</td>
+                  <td width="800px" colspan="4">13.11.69</td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="HCP1">Helsetjenesteenheter</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <th colspan="8" class="h3">Avsender</th>
+               </tr>
+               <tr>
+                  <th>Navn</th>
+                  <td width="200px">NORSK HELSENETT SF HOVEDKONTOR</td>
+                  <th>HER-id</th>
+                  <td colspan="5">91393</td>
+               </tr>
+               <tr>
+                  <th>Avdeling</th>
+                  <td width="200px">Meldingsvalidering</td>
+                  <th>HER-id</th>
+                  <td colspan="5">94866</td>
+               </tr>
+               <tr>
+                  <th colspan="8" class="h3">Mottaker</th>
+               </tr>
+               <tr>
+                  <th>Navn</th>
+                  <td width="200px">NORSK HELSENETT SF HOVEDKONTOR</td>
+                  <th>HER-id</th>
+                  <td colspan="5">91393</td>
+               </tr>
+               <tr>
+                  <th>Helsepersonell</th>
+                  <td width="200px">Tulle Tre</td>
+                  <th>HER-id</th>
+                  <td colspan="5">91439</td>
+               </tr>
+               <tr>
+                  <th colspan="8" class="h3">Kopimottaker</th>
+               </tr>
+               <tr>
+                  <th>Navn</th>
+                  <td width="200px">NORSK HELSENETT SF HOVEDKONTOR</td>
+                  <th>HER-id</th>
+                  <td colspan="5">91393</td>
+               </tr>
+               <tr>
+                  <th>Avdeling</th>
+                  <td width="200px">***Testtjeneste***</td>
+                  <th>HER-id</th>
+                  <td colspan="5">95136</td>
+               </tr>
+               <tr>
+                  <th colspan="8" class="h3">Ansvarlig helsepersonell</th>
+               </tr>
+               <tr>
+                  <th>Helsepersonell</th>
+                  <td width="200px">Overlege Rita Lin</td>
+                  <th>HPR-nummer</th>
+                  <td colspan="5">9144900</td>
+               </tr>
+               <tr>
+                  <th>Telefon</th>
+                  <td colspan="8">+4787654321</td>
+               </tr>
+               <tr>
+                  <th colspan="8" class="h3">Henvisende helsepersonell</th>
+               </tr>
+               <tr>
+                  <th>Helsepersonell</th>
+                  <td width="200px">Turnuslege August September</td>
+                  <th>HPR-nummer</th>
+                  <td colspan="5">9144897</td>
+               </tr>
+               <tr>
+                  <th>Telefon</th>
+                  <td colspan="8">+4712345678</td>
+               </tr>
+               <tr>
+                  <th colspan="8" class="h3">Fastlege</th>
+               </tr>
+               <tr>
+                  <th>Helsepersonell</th>
+                  <td width="200px">Tulle tre</td>
+                  <th>HPR-nummer</th>
+                  <td colspan="5">xxx</td>
+               </tr>
+               <tr>
+                  <th>Telefon</th>
+                  <td colspan="8">+4722335678</td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="Event1">Hendelser</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <th colspan="1">Type</th>
+                  <th colspan="1">Tidspunkt</th>
+                  <th colspan="6">Ut&nbsp;til</th>
+               </tr>
+               <tr>
+                  <td width="200px" colspan="1"><span class="strong">Heldøgnsopphold&nbsp;
+                        					</span></td>
+                  <td width="200px" colspan="1"><span class="strong">Start:&nbsp;</span>27.04.17&nbsp;kl.09:00<span class="strong">Slutt:&nbsp;</span>04.05.17&nbsp;kl.09:20</td>
+                  <td width="1200px" colspan="6">Ut til hjemmet&nbsp;
+                     					</td>
+               </tr>
+            </tbody>
+         </table>
+         <h2 id="ServReq1">Opprinnelig&nbsp;henvisning</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <th>Type</th>
+                  <td width="200px" colspan="1">Utredning/behandling</td>
+                  <th>Utstedt</th>
+                  <td width="1000px" colspan="5">20.04.17&nbsp;kl.10:15</td>
+               </tr>
+               <tr>
+                  <th>Diagnose</th>
+                  <td colspan="2">T90&nbsp;
+                     						(ICPC)&nbsp;Sukkersyke</td>
+                  <tr></tr>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="Document Smooth">
+         <h2>Dokumentinformasjon</h2>
+         <table>
+            <tbody>
+               <tr>
+                  <th>Melding&nbsp;opprettet</th>
+                  <td width="200">05.05.17&nbsp;kl.06:24</td>
+                  <th>Meldingsid</th>
+                  <td>e3332f10-46ca-11e7-9598-0800200c9a66</td>
+               </tr>
+               <tr>
+                  <th>Visningsversjon</th>
+                  <td colspan="3">epikrise1.1 - v3.1.2 </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </body>
+</html>
